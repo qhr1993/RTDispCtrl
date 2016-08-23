@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
             out<<"<p>"+QString::number(ptrShm->fftPoints)+"</p>"<<endl;
             break;
         case 'p':
-            ptrShm->fftPoints=(int) log2(32768/atoi(optarg));
+            ptrShm->fftPoints=(int)atoi(optarg);
         }
     }
     shm->detach();
